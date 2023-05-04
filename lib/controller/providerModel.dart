@@ -7,7 +7,7 @@ import '../config/constants/apikey.dart';
 
 final weatherProvider = FutureProvider<Weather>((ref) async {
   final response = await http.get(Uri.parse(
-      '$weatherUrl?q=London&appid=$apiKey')
+      '$weatherUrl?q=Abuja&appid=$apiKey')
   );
   //print(response.body);
   if (response.statusCode == 200) {
