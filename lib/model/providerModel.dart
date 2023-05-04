@@ -7,7 +7,7 @@ import 'constants/apikey.dart';
 final weatherProvider = FutureProvider<Weather>((ref) async {
   final response = await http.get(Uri.parse(
       'https://api.openweathermap.org/data/2.5/weather?q=London&appid='+apiKey));
-  print(response.body);
+  //print(response.body);
   if (response.statusCode == 200) {
     return Weather.fromJson(json.decode(response.body));
   } else {
