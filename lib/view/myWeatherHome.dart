@@ -18,7 +18,9 @@ class MyWeatherHome extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Icon(Icons.cloud,size: 100,color: Colors.lightBlueAccent,),
+                  Text('The cloud is ${data.weather?[0].description}'),
                   Text('The weather for ${data.sys?.country?.toUpperCase()}, ${data.name?.toUpperCase()} city:',style: const TextStyle(fontSize: 22),),
+                  Text('The coordinate is ${data.coord?.lat}, ${data.coord?.lon} degrees'),
                   const SizedBox(height: 10,),
                   Text('The temperature is ${data.main?.temp}'),
                   Text('The temperature Min is ${data.main?.tempMin}'),

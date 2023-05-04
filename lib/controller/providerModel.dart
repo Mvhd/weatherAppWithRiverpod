@@ -9,7 +9,7 @@ final weatherProvider = FutureProvider<Weather>((ref) async {
   final response = await http.get(Uri.parse(
       '$weatherUrl?q=London&appid=$apiKey')
   );
-  //print(response.body);
+  print(response.body);
   if (response.statusCode == 200) {
     return Weather.fromJson(json.decode(response.body));
   } else {
